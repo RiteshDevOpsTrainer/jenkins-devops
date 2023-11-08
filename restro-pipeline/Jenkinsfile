@@ -11,8 +11,7 @@ node {
 	}
 	
 	stage('deploy') {
-		sh 'mv target/restro.war target/hotel.war'
-		deploy adapters: [tomcat9(credentialsId: 'c7ba21e9-0018-4029-93aa-fdac97a3c3cb', path: '', url: 'http://13.233.86.137:8080/')], contextPath: null, onFailure: false, war: '**/*.war'
+		deploy adapters: [tomcat9(credentialsId: 'da5befdb-1179-4768-9f07-a249ac45ae3a', path: '', url: 'http://13.126.123.137:8080')], contextPath: null, war: '**/*.war'
 	}
 
 }
